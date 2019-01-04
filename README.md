@@ -1,5 +1,7 @@
 # FDS Snake 게임 실습
 
+![preview](preview.png)
+
 이 프로젝트는 [뱀 게임](https://en.wikipedia.org/wiki/Snake_%28video_game_genre%29)의 로직을 쉽게 구현해볼 수 있도록, 기반 코드를 미리 작성해 놓은 템플릿 프로젝트입니다.
 
 - 필요한 도구를 설치한 후 프로젝트를 실행시키세요.

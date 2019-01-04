@@ -55,7 +55,7 @@ SnakeGameLogic.prototype.nextState = function() {
   // 게임이 아직 끝나지 않았으면 `true`를 반환
   // 게임이 끝났으면 `false`를 반환
   
-   let newHead;
+   // let newHead;
 
    /* 김승하 강사님 코드
   if(this.direction === "right"){
@@ -98,9 +98,6 @@ return true;
 */
 
 
-
-
-
   // 초당 newxtState가 수행 되면서 시간이 지날수록 앞으로 낳아가고 좌우 방향 좌표 통해 명령
     if (this.direction === "right") {
       this.joints.unshift({ x: this.joints[0].x + 1, y: this.joints[0].y });
@@ -114,10 +111,9 @@ return true;
     
     // 뱀이 과일먹었을때 fruit 위치 생성과 과일이 뱀의 몸에 생성되지 않도록 지정
          
-    
   if (this.joints[0].x === this.fruit.x && this.joints[0].y === this.fruit.y) {
     
-    do {
+    do {  
       this.fruit.x = Math.floor(Math.random() * COLS);
       this.fruit.y = Math.floor(Math.random() * ROWS);
     } while (this.joints.some(item => item.x === this.fruit.x && item.y === this.fruit.y));
@@ -135,16 +131,15 @@ return true;
   }
   
 // 벽에 부딪히면 종료 되는 이벤트 
-  if (this.joints[0].x == -1 || this.joints[0].x == COLS || this.joints[0].y == -1 || this.joints[0].y == ROWS) {
+  if (this.joints[0].x <= -1 || this.joints[0].x <= COLS || this.joints[0].y <= -1 || this.joints[0].y <= ROWS) {
     return false; 
   }  
-  else {return true;
+  else {
           console.log(`nextState`);
+          return true;
         }
 }
 export default SnakeGameLogic;
 
-
 //some method를 써라
-
 // 해야될 과제  자기몸에 박았을때, 뒤로갔을때.
